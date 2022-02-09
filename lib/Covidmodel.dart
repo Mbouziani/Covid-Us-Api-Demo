@@ -8,18 +8,10 @@ class Covidmodel {
       this.totalTestResults);
 
   Covidmodel.fromJson(Map<String, dynamic> json) {
-    this.date = json["date"];
-    this.positive = json["positive"];
-    this.negative = json["negative"];
-    this.death = json["death"];
-    this.totalTestResults = json["totalTestResults"];
+    date = json["date"];
+    positive = json["positive"];
+    negative = json["negative"];
+    death = json["death"];
+    totalTestResults = json["totalTestResults"];
   }
-
-/* 
-    "date": 20210307,
-    "positive": 28756489,            
-    "negative": 74582825, 
-    "death": 515151,   
-    "totalTestResults": 363825123,    
-*/
 }

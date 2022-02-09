@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:coviddemo/CovidController.dart';
 import 'package:coviddemo/Covidmodel.dart';
 import 'package:coviddemo/logique/numbergenerator.dart';
@@ -11,13 +13,13 @@ class Homescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff243447),
+      backgroundColor: const Color(0xff243447),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color(0xffc51f5d),
-        title: Text("Covid Now"),
+        backgroundColor: const Color(0xffc51f5d),
+        title: const Text("Covid Now"),
       ),
-      body: Container(
+      body: SizedBox(
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
           child: FutureBuilder(
@@ -36,15 +38,15 @@ Widget ListCovid(var data) {
   List<Covidmodel> Covidlist = data;
 
   return ListView.builder(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       shrinkWrap: true,
       itemCount: Covidlist.length,
       itemBuilder: (context, indexe) {
         return Container(
-          margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-          padding: EdgeInsets.symmetric(horizontal: 5, vertical: 15),
+          margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 15),
           decoration: BoxDecoration(
-              color: Color(0xff141d26), //#243447
+              color: const Color(0xff141d26), //#243447
               boxShadow: const [
                 BoxShadow(
                     color: Colors.black,
